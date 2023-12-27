@@ -1,0 +1,14 @@
+<script>
+    //step 1 = 
+    //localhpst/get/email={id} = 2
+    async function getEmail(url) {
+        let data = await fetch(url);
+        //let responce = await data.text(); // echo 
+        let responce = await data.json(); // json 
+
+        return responce;
+    }
+    let email = getEmail("http://localhost/get/email=2");
+    console.log(email); // if Echo  / text()
+    email.then(data => console.log(data));
+</script>
